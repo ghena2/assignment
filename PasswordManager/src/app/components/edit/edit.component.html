@@ -1,0 +1,46 @@
+<form [formGroup]="editForm" (submit)="submit()" class="row">
+    <div class="form-group col">
+        <label class="m-2" for="userName">userName</label>
+        <input type="text"
+        formControlName="userName"
+               class="form-control"
+               id="userName"
+               [(ngModel)]="user.userName"
+               placeholder="userName">
+    </div>
+    <div class="form-group col">
+        <label class="m-2" for="password">password</label>
+        <input type="password"
+        formControlName="password"
+               class="form-control"
+               id="password"
+               [(ngModel)]="user.password"
+               placeholder="password">
+    </div>
+    <div class="form-group col">
+        <label class="m-2" for="app">app</label>
+        <input type="text"
+        formControlName="app"
+               class="form-control"
+               id="app"
+               [(ngModel)]="user.app"
+               placeholder="app">
+    </div>
+    <div class="form-group col">
+        <label class="m-2" for="category">category</label>
+        <input type="text"
+        formControlName="category"
+               class="form-control"
+               id="category"
+               [(ngModel)]="user.category"
+               placeholder="category">
+    </div>
+    <div>
+        <button type="submit"
+        class="btn btn-primary m-1"        
+        [disabled]="editForm.invalid">
+        Save
+    </button>
+    </div>
+
+</form>
